@@ -77,7 +77,7 @@ const Portfolio = ({ page }) => {
             {portfolio.map((obj) => (
               <div
                 key={obj.title}
-                className="keen-slider__slide border-4 border-primary/40 rounded-xl bg-custom-gradient "
+                className="keen-slider__slide border-2 border-primary/40 rounded-xl bg-custom-gradient "
                 // data-aos="fade-up"
               >
                 {/* <div

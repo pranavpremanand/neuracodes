@@ -27,7 +27,6 @@ const Contact = () => {
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      // to: "remeesreme4u@gmail.com",
       subject: "You have a new message from Neuracodes",
       body: emailBody,
     };
@@ -41,7 +40,7 @@ const Contact = () => {
     })
       .then((response) => response.json())
       .then((res) => {
-        if(res.error){
+        if (res.error) {
           return toast.error(res.error);
         }
         toast.success("Email sent successfully");
@@ -84,14 +83,9 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                className="mt-1 w-full placeholder-slate-800 bg-transparent outline-none border-2 rounded-sm font-light border-gray-400 px-2 py-3"
+                className="mt-1 w-full placeholder-slate-800 border-primary/30 bg-transparent outline-none border-2 rounded-sm font-light px-2 py-3"
                 placeholder="Enter Full Name"
                 {...register("fullName", { required: "Full name is required" })}
-                style={{
-                  borderImageSource:
-                    "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                  borderImageSlice: 1,
-                }}
               />
               {errors.fullName && (
                 <span className="text-red-500 text-sm">
@@ -106,7 +100,7 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-2 rounded-sm font-light border-gray-400 px-2 py-3"
+                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
                 placeholder="Enter Mobile Number"
                 {...register("mobileNumber", {
                   required: "Mobile number is required",
@@ -115,11 +109,6 @@ const Contact = () => {
                     message: "Invalid phone number",
                   },
                 })}
-                style={{
-                  borderImageSource:
-                    "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                  borderImageSlice: 1,
-                }}
               />
               {errors.mobileNumber && (
                 <span className="text-red-500 text-sm">
@@ -134,7 +123,7 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-2 rounded-sm font-light border-gray-400 px-2 py-3"
+                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
                 placeholder="Enter Email"
                 {...register("email", {
                   required: "Email is required",
@@ -143,11 +132,6 @@ const Contact = () => {
                     message: "Invalid email address",
                   },
                 })}
-                style={{
-                  borderImageSource:
-                    "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                  borderImageSlice: 1,
-                }}
               />
               {errors.email && (
                 <span className="text-red-500 text-sm">
@@ -162,14 +146,9 @@ const Contact = () => {
               </label>
               <textarea
                 rows="4"
-                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-2 rounded-sm font-light border-gray-400 px-2 py-3"
+                className="mt-1 w-full bg-transparent outline-none placeholder-slate-800 border-primary/20 border-2 rounded-sm font-light px-2 py-3"
                 placeholder="Enter Message"
                 {...register("message", { required: "Message is required" })}
-                style={{
-                  borderImageSource:
-                    "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                  borderImageSlice: 1,
-                }}
               />
               {errors.message && (
                 <span className="text-red-500 text-sm">

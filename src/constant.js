@@ -112,8 +112,8 @@ export const companyDetails = {
   phone: "+916360572147",
   whatsapp: "+916360572147",
   whatsappbox: "+916360572147",
-  email: "abc@xya.com",
-  address: "Vadakkemuriyil, Athumpumkulam P.O, Konni, Pathanamthitta, 689692, Kerala, India",
+  email: "neuracodesolutions@gmail.com",
+  address: "Vice Bread Enterprises, Konni, Pathanamthitta, Kerala - 689692, India",
 };
 
 // website routes
