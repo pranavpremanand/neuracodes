@@ -92,6 +92,17 @@ export const LandingPage = ({ page }) => {
           height="100%"
           playsinline
           playing
+          config={{
+            file: {
+              attributes: {
+                style: {
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                },
+              },
+            },
+          }}
           className="react-player left-0 top-0 absolute object-cover h-full w-full"
         />
         {/* <img
