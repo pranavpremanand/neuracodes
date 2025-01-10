@@ -20,22 +20,21 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 const MapComponent = () => {
   // Use useMemo to memoize the location array
-  // 12.959211956417517, 77.64690870405198;
-  const location = useMemo(() => [12.959211956417517, 77.64690870405198], []);
+  const location = useMemo(() => [9.2310, 76.9410], []);
 
   const mapRef = useRef(); // Reference to the map
 
   // Center the map to the location when it loads
   useEffect(() => {
     if (mapRef.current) {
-      mapRef.current.setView(location, 13); // Set view to the location and zoom level
+      mapRef.current.setView(location, 10); // Set view to the location and zoom level
     }
   }, [location]); // Now location will not change on every render
 
   return (
     <MapContainer
       center={location}
-      zoom={14}
+      zoom={10}
       style={{ height: "70vh", width: "100%", zIndex: 0 }}
       whenCreated={(mapInstance) => (mapRef.current = mapInstance)} // Save the map instance to ref
       scrollWheelZoom={false} // Disable zooming with the scroll wheel

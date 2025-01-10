@@ -113,7 +113,8 @@ export const companyDetails = {
   whatsapp: "+916360572147",
   whatsappbox: "+916360572147",
   email: "neuracodesolutions@gmail.com",
-  address: "Vice Bread Enterprises, Konni, Pathanamthitta, Kerala - 689692, India",
+  address:
+    "Vice Bread Enterprises, Konni, Pathanamthitta, Kerala - 689692, India",
 };
 
 // website routes
@@ -132,6 +133,11 @@ export const routes = [
     name: "About Us",
     path: "/about-us",
     component: <AboutUs />,
+  },
+  {
+    name: "Blogs",
+    path: "",
+    component: "",
   },
   {
     name: "Contact Us",
