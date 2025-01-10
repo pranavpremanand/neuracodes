@@ -346,16 +346,11 @@ export const LandingPage = ({ page }) => {
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full bg-[#faf3ef] placeholder-slate-800  outline-none border-2 rounded-sm font-light border-primary px-2 py-3"
+                  className="mt-1 w-full bg-[#faf3ef] placeholder-slate-800  outline-none border-2 rounded-sm font-light border-primary/60 px-2 py-3"
                   placeholder="Enter Full Name"
                   {...register("fullName", {
                     required: "Full name is required",
                   })}
-                  style={{
-                    borderImageSource:
-                      "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                    borderImageSlice: 1,
-                  }}
                 />
                 {errors.fullName && (
                   <span className="text-red-500 text-sm">
@@ -370,7 +365,7 @@ export const LandingPage = ({ page }) => {
                 </label>
                 <input
                   type="text"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary px-2 py-3"
+                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
                   placeholder="Enter Mobile Number"
                   {...register("mobileNumber", {
                     required: "Mobile number is required",
@@ -379,11 +374,6 @@ export const LandingPage = ({ page }) => {
                       message: "Invalid phone number",
                     },
                   })}
-                  style={{
-                    borderImageSource:
-                      "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                    borderImageSlice: 1,
-                  }}
                 />
                 {errors.mobileNumber && (
                   <span className="text-red-500 text-sm">
@@ -398,7 +388,7 @@ export const LandingPage = ({ page }) => {
                 </label>
                 <input
                   type="email"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary px-2 py-3"
+                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
                   placeholder="Enter Email"
                   {...register("email", {
                     required: "Email is required",
@@ -407,11 +397,6 @@ export const LandingPage = ({ page }) => {
                       message: "Invalid email address",
                     },
                   })}
-                  style={{
-                    borderImageSource:
-                      "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                    borderImageSlice: 1,
-                  }}
                 />
                 {errors.email && (
                   <span className="text-red-500 text-sm">
@@ -426,14 +411,9 @@ export const LandingPage = ({ page }) => {
                 </label>
                 <textarea
                   rows="4"
-                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary px-2 py-3"
+                  className="mt-1 w-full bg-[#faf3ef] outline-none placeholder-slate-800 border-2 rounded-sm font-light border-primary/60 px-2 py-3"
                   placeholder="Enter Message"
                   {...register("message", { required: "Message is required" })}
-                  style={{
-                    borderImageSource:
-                      "linear-gradient(90deg, rgba(250,120,67,0.545) 0%, rgba(164,164,164,0.612) 100%)",
-                    borderImageSlice: 1,
-                  }}
                 />
                 {errors.message && (
                   <span className="text-red-500 text-sm">
