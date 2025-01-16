@@ -11,7 +11,7 @@ import whyus2 from "../../assets/images/whyus2.jpg";
 const WhyChooseUs = () => {
   const totalYrs = 3;
   const totalOnTimeCompletionPercentage = 100;
-  const totalExperts = 10;
+  const totalExperts = 15;
   const totalClients = 50;
 
   const [yrs, setYrs] = useState(0);

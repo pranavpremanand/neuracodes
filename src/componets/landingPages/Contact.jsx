@@ -70,7 +70,7 @@ const Contact = () => {
             <img
               src={image}
               alt=""
-              className="max-h-[21rem] object-cover rounded-xl"
+              className="max-h-[23rem] object-cover object-[100%_20%] rounded-xl"
             />
           </div>
           <form
