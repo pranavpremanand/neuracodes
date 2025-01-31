@@ -16,7 +16,7 @@ import landingpagevideo from "../../assets/videos/home-banner.mp4";
 import Faqs from "../../componets/common/Faqs";
 import { useForm } from "react-hook-form";
 import Credibility from "../../componets/common/Credibility";
-import image from "../../assets/images/contactimage.jpg";
+import image from "../../assets/images/contactimage1.webp";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
