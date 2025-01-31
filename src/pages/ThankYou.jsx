@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 // import { companyDetails, logoImg, routes } from "../constant";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import { companyDetails, logoImg, routes } from "../constant";
+import CalendlyWidget from "../componets/common/CalendyWidget";
 
 const Thankyou = () => {
+  const [showCalendy, setShowCalendy] = React.useState(false);
   return (
     <div className="min-h-screen flex flex-col justify-between bg-primary/20">
       <div className="pt-2 pb-6 top-0 w-full bg-[#140028] backdrop-blur-md z-50 text-black">
@@ -20,14 +22,28 @@ const Thankyou = () => {
         </div>
       </div>
       <div className="wrapper h-full flex flex-col items-center py-[8rem] gap-3 text-[#2e2e45] text-center">
-        <h1 className="heading-1">Thank You!</h1>
+        {/* <h1 className="heading-1">Thank You!</h1> */}
         <p className="desc !font-semibold">
           We have received your message and will get back to you as soon as
           possible.
         </p>
-        <Link to="/" className="primary-btn w-fit mt-4 text-black">
-          Home
-        </Link>
+
+        {/* Calendy Widget */}
+        <CalendlyWidget
+          isOpen={showCalendy}
+          onClose={() => setShowCalendy(false)}
+        />
+        <div className="mt-4 flex gap-5">
+          <button
+            onClick={() => setShowCalendy(true)}
+            className="primary-btn w-fit text-black"
+          >
+            Schedule A Meeting
+          </button>
+          <Link to="/" className="secondary-btn w-fit text-black">
+            Home
+          </Link>
+        </div>
       </div>
       <div className="py-14 bg-[#140028]">
         <div className="wrapper text-white">

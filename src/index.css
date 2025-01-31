@@ -9,6 +9,10 @@
   width: 6px;
 }
 
+.modal-content::-webkit-scrollbar {
+  overflow: hidden !important;
+}
+
 ::-webkit-scrollbar-thumb {
   @apply bg-primary;
   border-radius: 8px;

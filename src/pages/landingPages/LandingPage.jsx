@@ -1,22 +1,12 @@
 import React, { useState } from "react";
-// import section5Img1 from "../../assets/images/section-5-img-1.png";
-// import section5Img2 from "../../assets/images/section-5-img-2.png";
-// import section5Img3 from "../../assets/images/section-5-img-3.png";
-// import section5Img4 from "../../assets/images/section-5-img-4.png";
-// import section5Img5 from "../../assets/images/section-5-img-5.png";
-// import section5Img6 from "../../assets/images/section-5-img-6.png";
-// import section5Img7 from "../../assets/images/section-5-img-7.png";
 import Contact from "../../componets/landingPages/Contact";
 import {
-  appDevBanner,
   appLandingAbout,
   companyDetails,
-  webDevBanner,
   webLandingAbout,
 } from "../../constant";
 import { Link as ScrollLink } from "react-scroll";
 import WhyChooseUs from "../../componets/common/WhyChooseUs";
-// import EndlessOpportunitiesSection from "../../componets/common/EndlessOpportunitiesSection";
 import LandingServices from "../../componets/landingPages/LandingServices";
 import UnlockEfficiency from "../../componets/common/UnlockEfficiency";
 import Testimonials from "../../componets/common/Testimonials";
@@ -26,7 +16,7 @@ import landingpagevideo from "../../assets/videos/home-banner.mp4";
 import Faqs from "../../componets/common/Faqs";
 import { useForm } from "react-hook-form";
 import Credibility from "../../componets/common/Credibility";
-import image from "../../assets/images/contactimage.jpg";
+import image from "../../assets/images/contactimage1.webp";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
@@ -105,11 +95,6 @@ export const LandingPage = ({ page }) => {
           }}
           className="react-player left-0 top-0 absolute object-cover h-full w-full"
         />
-        {/* <img
-          src={isWebDevelopment ? webDevBanner : appDevBanner}
-          className="w-full h-full object-cover object-right absolute"
-          alt=""
-        /> */}
         <div className="bg-black/50 absolute w-full h-full"></div>
         <div
           data-aos="fade-up"
@@ -119,13 +104,6 @@ export const LandingPage = ({ page }) => {
             <div className="rounded-text-box border-white/70 font-medium text-white">
               {isWebDevelopment ? "Web Development" : "App Development"}
             </div>
-            {/* <h1 className="heading-1 text-white">
-              {isWebDevelopment
-                ? `Building Websites That Leverage ${(
-                    <span className="text-primary">AI</span>
-                  )} to Define Your Brand's Digital Presence`
-                : ""}
-            </h1> */}
             {isWebDevelopment ? (
               <h1 className="heading-1 text-white leading-tight">
                 Creating Websites Powered by Identity
@@ -146,9 +124,9 @@ export const LandingPage = ({ page }) => {
               to="contact"
               smooth
               offset={-90}
-              className="primary-btn mt-2"
+              className="primary-btn mt-2 capitalize"
             >
-              Get Started
+              Book a call now
             </ScrollLink>
           </div>
         </div>
@@ -188,9 +166,9 @@ export const LandingPage = ({ page }) => {
                 to="contact"
                 smooth
                 offset={-90}
-                className="primary-btn"
+                className="primary-btn capitalize"
               >
-                Contact Us
+                Book a call now
               </ScrollLink>
               <ScrollLink
                 to="services"
@@ -329,7 +307,7 @@ export const LandingPage = ({ page }) => {
               </div>
 
               <button className="primary-btn" type="submit">
-                {spinner ? "Sending..." : "Submit"}
+                {spinner ? "Sending..." : "Schedule an appointment"}
               </button>
             </form>
           </div>
