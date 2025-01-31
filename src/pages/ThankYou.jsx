@@ -34,15 +34,15 @@ const Thankyou = () => {
           onClose={() => setShowCalendy(false)}
         />
         <div className="mt-4 flex gap-5">
-          <button
+          {/* <button
             onClick={() => setShowCalendy(true)}
             className="primary-btn w-fit text-black"
           >
             Schedule A Meeting
-          </button>
-          <Link to="/" className="secondary-btn w-fit text-black">
+          </button> */}
+          {/* <Link to="/" className="primary-btn w-fit text-black">
             Home
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="py-14 bg-[#140028]">

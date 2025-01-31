@@ -157,8 +157,8 @@ const Contact = () => {
               )}
             </div>
 
-            <button className="primary-btn" type="submit">
-              {spinner ? "Sending..." : "Submit"}
+            <button className="primary-btn capitalize" type="submit">
+              {spinner ? "Sending..." : "Schedule an appointment"}
               {/* Submit */}
             </button>
           </form>
