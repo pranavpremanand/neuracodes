@@ -13,6 +13,7 @@
   overflow: hidden !important;
 }
 
+
 ::-webkit-scrollbar-thumb {
   @apply bg-primary;
   border-radius: 8px;
