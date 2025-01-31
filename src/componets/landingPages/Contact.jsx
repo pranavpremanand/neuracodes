@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import image from "../../assets/images/contactimage.jpg";
+import image from "../../assets/images/contactimage1.webp";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { companyDetails } from "../../constant";
