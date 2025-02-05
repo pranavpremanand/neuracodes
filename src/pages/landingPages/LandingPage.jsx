@@ -19,6 +19,7 @@ import Credibility from "../../componets/common/Credibility";
 import image from "../../assets/images/contactimage1.webp";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");
@@ -44,32 +45,29 @@ export const LandingPage = ({ page }) => {
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      // to: "remeesreme4u@gmail.com",
-      subject: "You have a new message from [you company name]",
+      subject: "You have a new message from Neuracodes",
       body: emailBody,
+      name:"Neuracodes"
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        console.log(res);
-        if (res.error) {
-          return toast.error(res.error);
-        }
+    try {
+      const res = await axios.post(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        payload
+      );
+      if (res.data.success) {
         toast.success("Email sent successfully");
         reset();
         navigate("/thank-you");
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      })
-      .finally(() => setSpinner(false));
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error("Something went wrong");
+    } finally {
+      setSpinner(false);
+    }
   };
   return (
     <>

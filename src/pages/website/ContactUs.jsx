@@ -8,6 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import axios from "axios";
 const MapComponent = lazy(() => import("../../componets/website/MapComponent"));
 
 const ContactUs = () => {
@@ -26,37 +27,34 @@ const ContactUs = () => {
     var emailBody = "Name: " + data.name + "\n\n";
     emailBody += "Email: " + data.email + "\n\n";
     emailBody += "Phone: " + data.phone + "\n\n";
-    emailBody += "Subject: " + data.subject + "\n\n";
     emailBody += "Message:\n" + data.message;
 
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      // to: "remeesreme4u@gmail.com",
-      subject: "You have a new message from Neuracodes",
+      subject: data.subject,
       body: emailBody,
+      name: "Neuracodes",
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.error) {
-          return toast.error(res.error);
-        }
+    try {
+      const res = await axios.post(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        payload
+      );
+      if (res.data.success) {
         toast.success("Email sent successfully");
         reset();
         navigate("/thank-you");
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      })
-      .finally(() => setSpinner(false));
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error("Something went wrong");
+    } finally {
+      setSpinner(false);
+    }
   };
   return (
     <>
