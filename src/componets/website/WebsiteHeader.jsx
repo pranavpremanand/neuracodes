@@ -2,7 +2,7 @@ import Drawer from "react-modern-drawer";
 import { Divide as Hamburger } from "hamburger-react";
 import { IoMdClose } from "react-icons/io";
 import React, { useEffect, useState } from "react";
-import { logoImg, routes } from "../../constant";
+import { logoImg, websiteLinks } from "../../constant";
 import { Link, useLocation } from "react-router-dom";
 
 const WebsiteHeader = () => {
@@ -48,7 +48,7 @@ const WebsiteHeader = () => {
             />
           </Link>
           <div className="lg:flex mt-7 items-center gap-10 hidden">
-            {routes.map(({ name, path }) => (
+            {websiteLinks.map(({ name, path }) => (
               <Link
                 to={`${path}`}
                 className={`link text-sm ${
@@ -76,7 +76,7 @@ const WebsiteHeader = () => {
             </button>
           </div>
           <div className="flex flex-col gap-6">
-            {routes.map(({ name, path }) => (
+            {websiteLinks.map(({ name, path }) => (
               <Link
                 onClick={() => setIsOpen(false)}
                 key={path}

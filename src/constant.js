@@ -136,13 +136,36 @@ export const routes = [
   },
   {
     name: "Blogs",
-    path: "",
+    path: "https://neuracodes.blogspot.com/",
     component: "",
   },
   {
     name: "Contact Us",
     path: "/contact-us",
     component: <ContactUs />,
+  },
+];
+
+export const websiteLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Services",
+    path: "/services",
+  },
+  {
+    name: "About Us",
+    path: "/about-us",
+  },
+  {
+    name: "Blogs",
+    path: "https://neuracodes.blogspot.com/",
+  },
+  {
+    name: "Contact Us",
+    path: "/contact-us",
   },
 ];
 

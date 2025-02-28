@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
-import { companyDetails, logoImg, routes } from "../../constant";
+import { companyDetails, logoImg, websiteLinks } from "../../constant";
 import { Link } from "react-router-dom";
 
 const WebsiteFooter = () => {
@@ -18,7 +18,7 @@ const WebsiteFooter = () => {
           <div className="flex md:flex-row flex-col gap-10">
             <div className="flex flex-col gap-2">
               <h6 className="font-medium mb-1">Quick Links</h6>
-              {routes.map(({ name, path }) => (
+              {websiteLinks.map(({ name, path }) => (
                 <Link
                   key={path}
                   to={path}
