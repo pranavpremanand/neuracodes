@@ -21,7 +21,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export const LandingPage = ({ page }) => {
+const LandingPage = ({ page }) => {
   const isWebDevelopment = Boolean(page === "web-development");
   const [spinner, setSpinner] = useState(false);
 
@@ -47,7 +47,7 @@ export const LandingPage = ({ page }) => {
       to: companyDetails.email,
       subject: "You have a new message from Neuracodes",
       body: emailBody,
-      name:"Neuracodes"
+      name: "Neuracodes",
     };
 
     try {
@@ -314,3 +314,5 @@ export const LandingPage = ({ page }) => {
     </>
   );
 };
+
+export default LandingPage;

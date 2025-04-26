@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { LandingPage } from "./pages/landingPages/LandingPage";
 import LandingHeader from "./componets/landingPages/LandingHeader";
 import LandingFooter from "./componets/landingPages/LandingFooter";
 import WebsiteHeader from "./componets/website/WebsiteHeader";
@@ -17,7 +16,9 @@ import { Toaster } from "react-hot-toast";
 
 const ServicePageLayout = lazy(() => import("./layout/ServicePageLayout"));
 const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
+const LandingPage = lazy(() => import("./pages/landingPages/LandingPage"));
 const Thankyou = lazy(() => import("./pages/ThankYou"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 AOS.init({
   once: true,
@@ -57,6 +58,16 @@ export default function App() {
             />
           ))}
 
+          <Route
+            path="/privacy-policy"
+            element={
+              <>
+                <WebsiteHeader />
+                <PrivacyPolicy />
+                <WebsiteFooter />
+              </>
+            }
+          />
           <Route path="/thank-you" element={<Thankyou />} />
 
           <Route path="/services" element={<ServicePageLayout />}>
