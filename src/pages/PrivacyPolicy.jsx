@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     <div className="bg-backgroundcolor min-h-screen pt-[8rem] md:pt-[9rem] pb-12">
       <div className="wrapper">
         {/* Privacy Policy Section */}
-        <section className="mb-16">
+        <section data-aos="fade-up" className="mb-16">
           <div className="flex items-center gap-4 mb-6">
             <h2 className="heading-2">Privacy Policy</h2>
           </div>
@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
         </section>
 
         {/* Terms and Conditions Section */}
-        <section className="mb-16">
+        <section data-aos="fade-up" className="mb-16">
           <div className="flex items-center gap-4 mb-6">
             <h2 className="heading-2">Terms and Conditions</h2>
           </div>
@@ -164,7 +164,7 @@ const PrivacyPolicy = () => {
         </section>
 
         {/* Refund & Cancellation Policy Section */}
-        <section className="mb-16">
+        <section data-aos="fade-up" className="mb-16">
           <div className="flex items-center gap-4 mb-6">
             <h2 className="heading-2">Refund & Cancellation Policy</h2>
           </div>
@@ -227,7 +227,7 @@ const PrivacyPolicy = () => {
         </section>
 
         {/* Contact Us Section */}
-        <section>
+        <section data-aos="fade-up">
           <div className="flex items-center gap-4 mb-6">
             <h2 className="heading-2">Contact Us</h2>
           </div>
