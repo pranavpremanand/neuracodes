@@ -60,11 +60,20 @@ const LandingFooter = () => {
               >
                 Blogs
               </ScrollLink>
-              <Link
-                to="/privacy-policy"
-                className="text-white desc text-sm"
-              >
+              <Link to="/privacy-policy" className="text-white desc text-sm">
                 Privacy Policy
+              </Link>
+              <Link
+                to="/terms-and-conditions"
+                className="text-white desc text-sm hover:text-primary transition-all duration-300"
+              >
+                Terms and Conditions
+              </Link>
+              <Link
+                to="/refund-and-cancellation-policy"
+                className="text-white desc text-sm hover:text-primary transition-all duration-300"
+              >
+                Refund and Cancellation
               </Link>
             </div>
             <div className="flex flex-col gap-2">

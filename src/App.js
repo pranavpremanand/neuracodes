@@ -19,6 +19,10 @@ const ServiceDetails = lazy(() => import("./pages/website/ServiceDetails"));
 const LandingPage = lazy(() => import("./pages/landingPages/LandingPage"));
 const Thankyou = lazy(() => import("./pages/ThankYou"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const RefundAndCancellation = lazy(() =>
+  import("./pages/RefundAndCancellation")
+);
 
 AOS.init({
   once: true,
@@ -64,6 +68,28 @@ export default function App() {
               <>
                 <WebsiteHeader />
                 <PrivacyPolicy />
+                <WebsiteFooter />
+              </>
+            }
+          />
+
+          <Route
+            path="/terms-and-conditions"
+            element={
+              <>
+                <WebsiteHeader />
+                <TermsAndConditions />
+                <WebsiteFooter />
+              </>
+            }
+          />
+
+          <Route
+            path="/refund-and-cancellation-policy"
+            element={
+              <>
+                <WebsiteHeader />
+                <RefundAndCancellation />
                 <WebsiteFooter />
               </>
             }
