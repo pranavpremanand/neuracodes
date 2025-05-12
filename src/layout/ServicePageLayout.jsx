@@ -154,7 +154,6 @@ const ServicePageLayout = () => {
           </Link>
         </div>
       </div>
-      <GetInTouch />
       <WebsiteFooter />
     </>
   );
